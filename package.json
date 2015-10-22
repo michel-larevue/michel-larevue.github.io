@@ -1,0 +1,10 @@
+{
+  "name": "michel",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "clean-css-brunch": "^1.7.2",
+    "css-brunch": "^1.7.0",
+    "less-brunch": "^1.8.1"
+  }
+}

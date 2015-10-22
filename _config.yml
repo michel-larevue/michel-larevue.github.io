@@ -1,0 +1,14 @@
+# Site settings
+title: Michel
+description: "Art, Culture & Société en Normandie"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://michel-larevue.fr" # the base hostname & protocol for your site
+permalink: /:title.html
+
+# Default Layout
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"

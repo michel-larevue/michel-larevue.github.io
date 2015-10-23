@@ -12,18 +12,63 @@ body{
   font-family: sans-serif;
   color: @black;
 }
-h1, h2{
+
+// titres
+
+h1,
+h2{
   line-height: 1.2;
 }
 h1{
-  
+
 }
 h2{
-  
+
 }
-p, ul ol{
+h3{
+
+}
+
+// textes et listes
+
+p,
+blockquote,
+ul,
+ol,
+dl{
   margin-bottom:1.5rem;
 }
+
+blockquote{
+
+}
+
+ul{
+
+}
+ol{
+
+}
+
+dl{
+
+}
+dt, dd{
+
+}
+
+.publication{
+
+}
+.chapo{
+
+}
+.partage{
+
+}
+
+// links
+
 a{
   color: @primary;
   &:focus,
@@ -31,26 +76,86 @@ a{
     text-decoration: none;
   }
 }
+
+.plus{
+
+}
+.plus-papier{
+
+}
+
+// inlines
+
 strong{
   font-weight: bold;
 }
-em{
+em,
+cite{
   font-style: italic;
 }
 
 // media
+
+figure,
+audio,
+video,
+iframe{
+  margin-bottom:1.5rem; // todo : fusionner avec p, blockquote, ul, ol ?
+}
 
 img, audio, video, iframe{
   max-width: 100%;
   height:auto;
 }
 
-// form
+figure{
 
+}
+figcaption{
 
+}
 
-// divers
+.galerie{
 
+}
+
+// asides
+
+aside{
+
+}
+
+// articles connexes
+
+.articles-connexes{
+  article{
+
+  }
+  img{
+
+  }
+  h1{
+
+  }
+  p{
+
+  }
+}
+
+// positionnements
+
+.center{
+  text-align: center;
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+.full-length{
+
+}
 
 // header
 
@@ -58,14 +163,14 @@ header{
 
 }
 .logo{
-  
+
 }
 nav{
   ul{
 
   }
   li{
-    
+
   }
   a{
 
@@ -77,9 +182,12 @@ nav{
 main{
 
 }
+article{
+
+}
 
 // footer
 
 footer{
-  
+
 }

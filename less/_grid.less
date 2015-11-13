@@ -4,6 +4,20 @@
 @column-width : 96 / @font-size * 1rem; // pour ces paramètres, équivalent en em à 5.333em;
 @gutter-width : 24 / @font-size * 1rem; // équivalnet ; 1.333 em
 
+// Clearfix
+.clearfix{
+  .clearfix();
+}
+.clearfix(){
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
 // Conteneur fixe
 .wrapper(@cols){
   width: @cols * @column-width;

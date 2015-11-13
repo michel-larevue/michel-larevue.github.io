@@ -205,21 +205,6 @@ aside{
 
 }
 
-// clearfix
-// http://www.positioniseverything.net/easyclearing.html
-
-.clearfix:after {
-  content: "\0020";
-  display: block; 
-  height: 0; 
-  clear: both; 
-  visibility: hidden;
-  overflow: hidden;
-}
-.clearfix {
-  display: inline-table;
-}
-
 // header
 
 header{
@@ -248,10 +233,18 @@ main{
 article{
 
 }
+
+// quelques colonnages
+
 .colonne{
   .init-col();
   float: none; // todo: nouveau mixin dans _grid.less ?
   margin:0 auto;
+}
+.colonne-deux-tiers{
+  .init-col();
+  .col-fluid(2,3);
+
 }
 
 // footer

@@ -19,16 +19,21 @@ h1,
 h2,
 h3{
   font-family: Decour, serif;
-  line-height: 1.2;
 }
 h1{
-
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  line-height: 1;
 }
 h2{
-
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 h3{
-
+  margin-bottom: 1.2rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 
 // margin-bottoms
@@ -48,14 +53,25 @@ audio,
 // textes et listes
 
 blockquote{
-
+  padding: 1.5rem 3rem;
+  font-size:3rem;
+  font-family: Decour, serif;
+  font-style: italic;
+  text-align:center;
 }
 
+ul,
+ol{
+  list-style-position: inside;
+}
 ul{
-  list-style: disc inside;
+  list-style-type: disc
+}
+ul ul{
+  list-style-type: circle;
 }
 ol{
-  list-style: decimal inside;
+  list-style-type: decimal;
 }
 
 dl{
@@ -114,6 +130,19 @@ cite{
   font-style: italic;
 }
 
+// sub, sup
+
+sub,
+sup{
+  position: relative; font-size: 80%; font-variant: normal; line-height: 0; vertical-align: baseline;
+}
+sub{
+  bottom: -0.5em;
+}
+sup{
+  top: -0.5em;
+}
+
 // media
 
 img, audio, video, iframe{
@@ -125,7 +154,8 @@ figure{
 
 }
 figcaption{
-
+  .colonne;
+  border-bottom:1px solid @secondary;
 }
 
 .galerie{
@@ -159,24 +189,6 @@ aside{
   }
 }
 
-// articles connexes
-
-.articles-connexes{
-  .row();
-  article{
-    .init-col();
-  }
-  img{
-
-  }
-  h1{
-
-  }
-  p{
-
-  }
-}
-
 // positionnements
 
 .center{
@@ -190,6 +202,21 @@ aside{
 }
 .full-length{
 
+}
+
+// clearfix
+// http://www.positioniseverything.net/easyclearing.html
+
+.clearfix:after {
+  content: "\0020";
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  overflow: hidden;
+}
+.clearfix {
+  display: inline-table;
 }
 
 // header
@@ -220,9 +247,33 @@ main{
 article{
 
 }
+.colonne{
+  .init-col();
+  .col-fluid(1, 3);
+  float: none; // todo: nouveau mixin dans _grid.less ?
+  margin:0 auto;
+}
 
 // footer
 
 footer{
 
+}
+
+// articles connexes
+
+.articles-connexes{
+  .row();
+  article{
+    .init-col();
+  }
+  img{
+
+  }
+  h1{
+
+  }
+  p{
+
+  }
 }

@@ -9,14 +9,16 @@ html{
 body{
   font-size: 1rem;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: Diaria, serif;
   color: @black;
 }
 
 // titres
 
 h1,
-h2{
+h2,
+h3{
+  font-family: Decour, serif;
   line-height: 1.2;
 }
 h1{
@@ -29,42 +31,60 @@ h3{
 
 }
 
-// textes et listes
+// margin-bottoms
 
 p,
 blockquote,
 ul,
 ol,
-dl{
+dl,
+aside,
+figure,
+audio,
+.video{
   margin-bottom:1.5rem;
 }
+
+// textes et listes
 
 blockquote{
 
 }
 
 ul{
-
+  list-style: disc inside;
 }
 ol{
-
+  list-style: decimal inside;
 }
 
 dl{
 
 }
-dt, dd{
+dt{
+  font-weight: bold;
+}
+dd{
 
 }
 
 .publication{
-
+  font-style: italic;
 }
 .chapo{
-
+  font-weight: bold;
 }
 .partage{
+  list-style: none;
+  li{
 
+  }
+  a{
+    &:focus,
+    &:hover{
+      
+    }
+  }
 }
 
 // links
@@ -96,13 +116,6 @@ cite{
 
 // media
 
-figure,
-audio,
-video,
-iframe{
-  margin-bottom:1.5rem; // todo : fusionner avec p, blockquote, ul, ol ?
-}
-
 img, audio, video, iframe{
   max-width: 100%;
   height:auto;
@@ -119,17 +132,39 @@ figcaption{
 
 }
 
+.video{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+.video iframe,
+.video object,
+.video embed{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 // asides
 
 aside{
+  padding:1rem;
+  background:#eee;
+  h1{
 
+  }
 }
 
 // articles connexes
 
 .articles-connexes{
+  .row();
   article{
-
+    .init-col();
   }
   img{
 
